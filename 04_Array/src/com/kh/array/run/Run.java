@@ -32,6 +32,7 @@ public class Run {
 //		cd.method4();
 //		cd.method5();
 //		cd.method6();
+		
 		cd.method7();
 	}
 }

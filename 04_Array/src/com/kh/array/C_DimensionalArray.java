@@ -179,21 +179,22 @@ public class C_DimensionalArray {
 		Scanner sc = new Scanner(System.in);
 		
 		int[][] arr = new int[2][3];
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j < arr[i].length; j++) {
-				if (i == 0) {
-					System.out.print("국어 점수 입력 : ");
-					int kor = sc.nextInt();
-					arr[i][j] = kor;
-				} else {
-					System.out.print("영어 점수 입력 : ");
-					int eng = sc.nextInt();
-					arr[i][j] = eng;
-				}
+		for(int i =0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+//				if (i == 0) {
+//					System.out.print("국어점수를 입력하세요 : ");
+//					int kor = sc.nextInt();
+//					arr[i][j] = kor;
+//				} else {
+//					System.out.print("영어점수를 입력하세요 : ");
+//					int eng = sc.nextInt();
+//					arr[i][j] = eng;
+//				}
+				System.out.printf("%s 점수를 입력하세요 : ", i==0 ? "국어" : "영어");
+				arr[i][j] = sc.nextInt();
 			}
-			//System.out.printf("국어점수 : %d %d %d\n", arr[0][0], arr[0][1], arr[0][2]);
 		}
-		System.out.printf("국어점수 : %d %d %d\n", arr[0][0], arr[0][1], arr[0][2]);
-		System.out.printf("영어점수 : %d %d %d\n", arr[1][0], arr[1][1], arr[1][2]);
+		System.out.printf("국어점수 : %d, %d, %d", arr[0][0], arr[0][1], arr[0][2]);
+		System.out.printf("\n영어점수 : %d, %d, %d", arr[1][0], arr[1][1], arr[1][2]);
 	}
 }
