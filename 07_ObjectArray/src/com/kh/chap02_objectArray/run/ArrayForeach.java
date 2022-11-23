@@ -67,7 +67,7 @@ public class ArrayForeach {
 		
 		int count = 0;
 		for (Phone p : phones) {
-			if (p.getSeries().equals(name)) {
+			if (p.getSeries().equals(name)) {	
 				System.out.println(name + " 핸드폰의 가격은 " + p.getPrice() + "원 입니다.");
 				count++;
 				break;
