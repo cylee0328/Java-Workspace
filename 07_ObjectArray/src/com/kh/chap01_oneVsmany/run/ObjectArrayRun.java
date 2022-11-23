@@ -30,6 +30,7 @@ public class ObjectArrayRun {
 			String publisher = sc.nextLine();
 			
 			arr[i] = new Book(title, author, price, publisher);
+//			System.out.println(arr[i].information());
 		}
 		
 		for(int i=0; i<arr.length; i++) {
@@ -41,14 +42,20 @@ public class ObjectArrayRun {
 		System.out.print("검색할 책 제목 : ");
 		String searchTitle = sc.nextLine();
 		
+		int count = 0;
 		for(int i=0; i<arr.length; i++) {
 			if(arr[i].getTitle().equals(searchTitle)) {
 				System.out.println(arr[i].getPrice());
+				break; // 책의 제목이 중복되지 않는 이상 break 문을 걸어주게되면
+					   // 찾고자 하는 책을 찾고나서 더이상 반복문을 실행시키지 않음.
+				
+				//만약 일치하는 도서를 찾지 못한 경우 "검색된 도서가 없습니다" 출력.
+			} else {
+				System.out.println("검색된 도서가 없습니다.");
+				break;
 			}
 		}
 	}
-		
-
 }
 
 
