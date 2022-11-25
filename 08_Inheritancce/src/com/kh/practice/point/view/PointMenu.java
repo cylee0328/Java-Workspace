@@ -27,7 +27,6 @@ public class PointMenu {
 		case 2 : rectangleMenu(); break;
 		case 9 : System.out.println("종료합니다."); return;
 		default : System.out.println("잘못입력했습니다. 다시입력하세요");
-		
 		}
 		break;
 	}
